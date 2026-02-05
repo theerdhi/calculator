@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator */
+.calculator {
+    background: #111;
+    padding: 25px;
+    border-radius: 20px;
+    width: 320px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Display */
+#display {
+    width: 100%;
+    height: 60px;
+
+    background: #222;
+    border: none;
+    outline: none;
+
+    color: #00ffcc;
+    font-size: 28px;
+    text-align: right;
+
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* All Buttons */
+button {
+    height: 55px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Numbers */
+button:not(.operator):not(.equal):not(.clear):not(.del) {
+    background: #2d2d2d;
+    color: white;
+}
+
+/* Operators */
+.operator {
+    background: #ff9500;
+    color: white;
+}
+
+/* Equal */
+.equal {
+    background: #00c853;
+    color: white;
+    grid-row: span 2;
+}
+
+/* Clear */
+.clear {
+    background: #ff3d00;
+    color: white;
+}
+
+/* Delete */
+.del {
+    background: #7c4dff;
+    color: white;
+}
+
+/* Zero */
+.zero {
+    grid-column: span 2;
+}
+
+/* Hover Effect */
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
